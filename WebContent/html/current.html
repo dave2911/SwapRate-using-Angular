@@ -1,0 +1,31 @@
+<div class="container" style="background-color: white;">
+	<span style="color: red;font-size: 24px">{{rss.status }}</span>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th class="col-sm-2">Rate</th>
+					<th class="col-sm-2">Currency</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>INR</td>
+					<td>{{rss.rates.inr}}</td>
+				</tr>
+				<tr>
+					<td>EUR</td>
+					<td>{{rss.rates.eur}}</td>
+				</tr>
+				<tr>
+					<td>CAD</td>
+					<td>{{rss.rates.cad}}</td>
+				</tr>
+				<tr>
+					<td>AUS</td>
+					<td>{{rss.rates.aus}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

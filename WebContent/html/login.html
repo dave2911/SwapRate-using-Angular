@@ -1,0 +1,26 @@
+<div class="container" style="background-color:white;" >
+      <form name="myForm" role="form" novalidate method="post">
+        <p>LOGIN HERE</p>
+          <div class="input-group" show-errors>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="username" type="text" class="form-control"  ng-model="credentials.username" ng-minlength=3 ng-pattern="/^[a-zA-Z0-9]*$/" autofocus name="username" ng-model="username" placeholder="Username" required />  
+             </div>
+          <p class="help-block" style="color:red" ng-show="myForm.username.$error.required && myForm.username.$dirty && myForm.username.$invalid">Username is required.</p>
+          <p class="help-block" style="color:red" ng-show="myForm.username.$error.pattern">Username must be letters and numbers only.</p>
+          <p class="help-block" style="color:red" ng-if="myForm.username.$error.minlength">Must be at least 3 characters.</p><br>
+          <div class="input-group" show-errors>
+           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+           <input id="password" type="password" class="form-control" name="password" ng-model="credentials.password"
+           ng-minlength=3  ng-unique="{key: 'users', property: 'username'}"
+            ng-pattern="/^[a-zA-Z0-9!@#$%&*]*$/"
+            autofocus  placeholder="Password" required >
+          </div>
+           <p class="help-block" style="color:red" ng-show="myForm.password.$error.required && myForm.password.$dirty && myForm.password.$invalid">password is required.</p>
+          <p class="help-block" style="color:red" ng-show="myForm.password.$error.pattern">Password must be a combination of alphabets, numbers and special characters only.</p>
+          <p class="help-block" style="color:red" ng-if="myForm.password.$error.minlength">Must be at least 3 characters.</p>
+          <br>
+          <div ><br>
+            <button ng-click="submitForm(credentials)" class="btn btn-danger" ng-disabled="!myForm.$valid">Submit</button>
+          </div><br>
+      </form>
+  </div>

@@ -1,0 +1,9 @@
+.error {color: red;}
+.required:before {
+    color: red;
+    content: '*';
+}
+.navBardemoBasicUsage md-content .ext-content {
+  padding: 50px;
+  margin: 20px;
+  background-color: #FFF2E0; }

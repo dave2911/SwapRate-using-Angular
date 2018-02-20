@@ -1,0 +1,36 @@
+<div ng-controller="formController">
+<div class="container" style="background-color:white;">
+ 
+
+ 
+
+ <div class="container col-lg-8 col-lg-offset-2">
+ <a href="downlaodJsonFile" class="btn btn-primary btn-lg btn-block login-button" ng-click="saveJSON()" ng-href="{{ url }}">Download json data</a>
+ <a href="downlaodCsvFile" class="btn btn-primary btn-lg btn-block login-button" ng-click="saveCsv()" ng-href="{{ url }}">Download csv data</a>
+ 
+    <h3>Complete History </h3>
+<table class="table table-striped table-bordered table-hover" style="margin-top: 20px">
+    <thead>
+      <tr>
+        <th style="text-align: center;">Date</th>
+        <th>CAD</th>
+        <th>INR</th>
+        <th>EUR</th>
+        <th>AUS</th>
+      </tr>
+    </thead>
+    <tbody>
+ 
+      <tr ng-repeat="x in history">
+        <td>{{x.date}}</td>
+        <td>{{x.rates.cad}}</td>
+        <td>{{x.rates.inr}}</td>
+        <td>{{x.rates.eur}}</td>
+        <td>{{x.rates.aus}}</td>
+      </tr>
+    
+    </tbody>
+</table>
+</div>
+</div>
+</div>
